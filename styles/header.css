@@ -1,22 +1,13 @@
 header{
-    position: fixed;
-    top: 0;
     width: 100%;
-    background: rgb(0, 0, 0);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    z-index: 1000;
-
+    padding: 18px 8%; 
 }
 
 #navbar{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap:40px;
+    justify-content: space-between;
 }
 
 #nav_list{
@@ -27,6 +18,7 @@ header{
 
 .logo img{
     width: 150px;
+    display: block;
 }
 
 .nav-item a{
@@ -48,23 +40,24 @@ header{
 #mobile_menu{
     display: none;
     
+    
 }
 
-@media screen and (max-width: 1170px){
-    #nav_list,
+@media screen and (max-width:1170px){
+    #nav_list, 
     #navbar .btn-default{
         display: none;
     }
 
     #mobile_btn{
         display: block;
-        background-color:transparent;
+        background: none;
         border: none;
-        font-size:1.5rem;
         cursor: pointer;
+        font-size: 1.5rem;
     }
-
-    #mobile_menu.active{
+     
+    #mobile_menu.active{ 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -76,11 +69,10 @@ header{
         flex-direction: column;
         gap: 20px;
     }
-
+   
     #mobile_nav_list .nav-item {
         list-style: none;
         text-align: center;
     }
+
 }
-
-
