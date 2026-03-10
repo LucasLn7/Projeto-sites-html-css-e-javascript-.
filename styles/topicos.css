@@ -16,18 +16,28 @@
   height: 220px;
   width: 220px;
 }
-
+.img{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
 .img img{
   width: 100%;
   height: 180px;
   object-fit: cover;
+  transition: transform 0.5s ease;
 }
-
+.card:hover .img img{
+  transform: scale(1.1);
+}
 .card-content {
   background: #0a0202;
   padding:15px;
   text-align: center;
-  width: 100%;
+  display:flex; 
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 .card-content h3 {
@@ -39,4 +49,39 @@
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(153, 32, 32, 0.6);
+}
+.saiba-card {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+.saiba-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(143, 34, 30, 0.4);
+}
+
+.saiba-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media screen and (max-width:768px){
+
+    .topicos{
+        gap: 25px;
+    }
+
+}
+
+@media screen and (max-width:450px){
+
+    .topicos{
+        grid-template-columns:1fr;
+    }
+
 }

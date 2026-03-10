@@ -11,3 +11,14 @@ function alternarTema(){
         botao.textContent = "🌑"
     }
 }
+document.addEventListener("DOMContentLoaded",function(){
+
+    const botao = document.getElementById("toggleTema")
+
+    if(document.body.classList.contains("claro")){
+        botao.textContent = "🌕"
+    }else{
+        botao.textContent = "🌑"
+    }
+
+})

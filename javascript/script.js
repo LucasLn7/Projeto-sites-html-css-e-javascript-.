@@ -3,13 +3,19 @@ $(document).ready(function() {
         $('#mobile_menu').toggleClass('active');
         $('#mobile_btn i').toggleClass('fa-bars fa-x');
     });
+     
+    $('#mobile_nav_list a').on('click', function(){
+        $('#mobile_menu').removeClass('active');
+        $('#mobile_btn i').removeClass('fa-x').addClass('fa-bars');
+    });
 
     const sections = $('section');
     const navItems = $('.nav-item');
 
     $(window).on('scroll', function () {
         const header = $('header');
-        const scrollPosition = $(window).scrollTop() - header.outerHeight();
+        const scrollPosition = $(window).scrollTop();
+        const headerHeight = header.outerHeight();
 
         let activeSectionIndex = 0;
 
@@ -21,7 +27,7 @@ $(document).ready(function() {
 
         sections.each(function(i) {
             const section = $(this);
-            const sectionTop = section.offset().top - 96;
+            const sectionTop = section.offset().top - headerHeight - 20;
             const sectionBottom = sectionTop + section.outerHeight();
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
@@ -37,7 +43,7 @@ $(document).ready(function() {
     if (typeof ScrollReveal !== 'undefined') {
         ScrollReveal().reveal('#cta', {
             origin: 'left',
-            duration: 2000,
+            duration: 1500,
             distance: '20%'
         });
         
@@ -45,14 +51,28 @@ $(document).ready(function() {
             origin: 'bottom',
             duration: 1500,
             distance: '20%',
-            interval: 200
+            interval: 300
         });
+        
         
         ScrollReveal().reveal('.topicos .card', {
             origin: 'right',
-            duration: 1500,
+            duration: 1200,
             distance: '20%',
-            interval: 100
+            interval: 150
+        });
+         
+        ScrollReveal().reveal('.topicos .card',{
+            origin:'bottom',
+            duration:1200,
+            distance:'20%',
+            interval:100
         });
     }
+    
+    $('.card').on('mouseenter',function(){
+        $(this).css('z-index','10');
+    }).on('mouseleave',function(){
+        $(this).css('z-index','1');
+    });
 });
