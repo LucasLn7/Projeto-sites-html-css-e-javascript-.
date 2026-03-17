@@ -58,8 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function getBotResponse(userMessage) {
 
-    const apiKey = "AIzaSyAGD_VjQdVh244qnyvNuU3aNVNXv43zczU";
-    const apiUrl = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+    const apiKey = "Chave_api";
+    const apiUrl = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${apiKey}`;    
     try {
 
       const response = await fetch(apiUrl, {

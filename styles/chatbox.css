@@ -6,8 +6,6 @@ body {
   color: #fff;
 }
 
-/* Floating Chat Icon */
-
 #chatbot-icon {
   position: fixed;
   bottom: 25px;
@@ -29,8 +27,6 @@ body {
 #chatbot-icon:hover {
   transform: scale(1.15) rotate(5deg);
 }
-
-/* Chat Container */
 
 #chatbot-container {
   position: fixed;
@@ -69,8 +65,6 @@ body {
   display:none !important;
 }
 
-/* Header */
-
 #chatbot-header{
   background: linear-gradient(135deg,#7723cb,#3d065a);
   padding:15px;
@@ -95,8 +89,6 @@ body {
   transform:scale(1.2);
 }
 
-/* Chat area */
-
 #chatbot-body{
   flex:1;
   padding:15px;
@@ -108,8 +100,6 @@ body {
   flex-direction:column;
   gap:10px;
 }
-
-/* Messages */
 
 .message{
   padding:12px 14px;
@@ -142,8 +132,6 @@ body {
   align-self:flex-start;
 }
 
-/* Input area */
-
 #chatbot-input-container{
   display:flex;
   padding:12px;
@@ -169,8 +157,6 @@ body {
 #chatbot-input:focus{
   background:#333;
 }
-
-/* Send button */
 
 #send-btn{
   margin-left:10px;
